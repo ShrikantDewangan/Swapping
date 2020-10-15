@@ -1,14 +1,16 @@
-# https://www.hackerrank.com/challenges/minimum-swaps-2/problem
+# Python program to swap two variables
 
-n = int(input())
-arr = list(map(int, input().split()))
-swaps = 0
+x = 5
+y = 10
 
-for i in range(0, n - 1):
-    while arr[i] != i + 1:
-        t = arr[arr[i] - 1]
-        arr[arr[i] - 1] = arr[i]
-        arr[i] = t
-        swaps += 1
+# To take inputs from the user
+#x = input('Enter value of x: ')
+#y = input('Enter value of y: ')
 
-print(swaps)
+# create a temporary variable and swap the values
+temp = x
+x = y
+y = temp
+
+print('The value of x after swapping: {}'.format(x))
+print('The value of y after swapping: {}'.format(y))
